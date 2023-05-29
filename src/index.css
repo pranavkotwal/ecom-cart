@@ -20,3 +20,8 @@
 .action-icons:hover{
   cursor:pointer;
 }
+
+.cart{
+  display: flex;
+ 
+}

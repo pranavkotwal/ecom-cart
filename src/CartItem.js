@@ -8,9 +8,29 @@ class CartItem extends React.Component{
             title:'Phone',
             qty:1,
             img:''
+            
+
         }
         // this.increaseQuantity = this.increaseQuantity.bind(this)
+        // this.testing()
+
     }
+    // testing(){
+    //     const promise = new Promise((resolove,reject)=>{
+    //         setTimeout(()=>{
+    //             resolove('done')
+    //         },3000)
+    //     })
+
+    //     promise.then(()=>{
+    //         //set state acts like sync call
+    //         this.setState({qty:100})
+    //         console.log('state',this.setState)
+    //     })
+    // }
+
+
+
     increaseQuantity=()=>{
         // console.log('this.state',this.state)
         // setState form 1
@@ -27,6 +47,11 @@ class CartItem extends React.Component{
         })
     }
     decreaseQuantity=()=>{
+        const {qty} = this.state
+
+        if(qty==0){
+            return;
+        }
         this.setState((prevState)=>{
             return{
                 qty:prevState.qty -1 
